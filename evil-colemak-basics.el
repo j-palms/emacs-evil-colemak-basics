@@ -1,7 +1,7 @@
 ;;; evil-colemak-basics.el --- Basic Colemak key bindings for evil-mode
 
 ;; Author: Wouter Bolsterlee <wouter@bolsterl.ee>
-;; Version: 2.2.1
+;; Version: 2.2.2
 ;; Package-Requires: ((emacs "24.3") (evil "1.2.12") (evil-snipe "2.0.3"))
 ;; Keywords: convenience emulations colemak evil
 ;; URL: https://github.com/wbolster/evil-colemak-basics
@@ -73,11 +73,11 @@ rotated; see evil-colemak-basics-rotate-t-f-j."
   "Initialise the keymap based on the current configuration."
   (let ((keymap (make-sparse-keymap)))
     (evil-define-key '(motion normal visual) keymap
-      "n" 'evil-next-line
-      "gn" 'evil-next-visual-line
-      "e" 'evil-previous-line
-      "E" 'evil-lookup
-      "ge" 'evil-previous-visual-line
+      "e" 'evil-next-line
+      "ge" 'evil-next-visual-line
+      "u" 'evil-previous-line
+      "U" 'evil-lookup
+      "gu" 'evil-previous-visual-line
       "i" 'evil-forward-char
       "I" 'evil-window-bottom
       "zi" 'evil-scroll-column-right
@@ -97,16 +97,16 @@ rotated; see evil-colemak-basics-rotate-t-f-j."
       "gL" 'evil-upcase)
     (evil-define-key 'normal keymap
       "l" 'evil-undo
-      "u" 'evil-insert
-      "U" 'evil-insert-line
-      "gu" 'evil-insert-resume
-      "gU" 'evil-insert-0-line)
+      "m" 'evil-insert
+      "M" 'evil-insert-line
+      "gm" 'evil-insert-resume
+      "gM" 'evil-insert-0-line)
     (evil-define-key 'visual keymap
       "l" 'evil-downcase
       "L" 'evil-upcase
-      "U" 'evil-insert)
+      "M" 'evil-insert)
     (evil-define-key '(visual operator) keymap
-      "u" evil-inner-text-objects-map)
+      "m" evil-inner-text-objects-map)
     (evil-define-key 'operator keymap
       "i" 'evil-forward-char)
     (when evil-colemak-basics-rotate-t-f-j
@@ -143,7 +143,8 @@ rotated; see evil-colemak-basics-rotate-t-f-j."
        (t (user-error "Invalid evil-colemak-basics-char-jump-commands configuration"))))
     (when (eq evil-colemak-basics-layout-mod 'mod-dh)
       (evil-define-key '(motion normal visual) keymap
-        "m" 'evil-backward-char)
+;; "m" 'evil-backward-char)
+        "n" 'evil-backward-char)
       (evil-define-key '(normal visual) keymap
         "h" 'evil-set-marker))
     keymap))
