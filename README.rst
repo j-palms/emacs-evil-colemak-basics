@@ -38,7 +38,7 @@ operator-pending state (``o``, inherits from motion state):
      - At Qwerty position?
      - Remarks
 
-   * - ``h``, ``n``, ``e``, ``i``
+   * - ``n``, ``e``, ``u``, ``i``
      - ``h``, ``j``, ``k``, ``l``
      - navigate
      - ``mnvo``
@@ -52,7 +52,7 @@ operator-pending state (``o``, inherits from motion state):
      - yes
      -
 
-   * - ``u``, ``U``
+   * - ``m``, ``M``
      - ``i``, ``I``
      - insert
      - ``_nv_``
@@ -73,7 +73,7 @@ operator-pending state (``o``, inherits from motion state):
      - yes
      -
 
-   * - ``E``
+   * - ``U``
      - ``K``
      - lookup
      - ``mnv_``
@@ -94,7 +94,7 @@ operator-pending state (``o``, inherits from motion state):
      - no
      - also mnemonic
 
-   * - ``u``
+   * - ``m``
      - ``i``
      - inner text object keymap
      - ``___o``
@@ -135,24 +135,12 @@ lines instead of real lines also behave as expected.
 
 The tables below indicate whether a key has its Colemak meaning, its
 Qwerty meaning, the same meaning, or neither.
-
-======= = = = = = = = = = =
-colemak q w f p g j l u y ;
-\       ↕ ↕ ⬇ ⬆ ⬆ × ⬇ ⬇ ⬆ ⬆
-qwerty  q w e r t y u i o p
-======= = = = = = = = = = =
-
-======= = = = = = = = = = =
-colemak a r s t d h n e i o
-\       ↕ ⬆ ⬆ ⬇ ⬆ ↕ ⬇ ⬇ ⬇ ⬆
-qwerty  a s d f g h j k l ;
-======= = = = = = = = = = =
-
-======= = = = = = = =
-colemak z x c v b k m
-\       ↕ ↕ ↕ ↕ ↕ ⬇ ↕
-qwerty  z x c v b n m
-======= = = = = = = =
+    
+=======   = = = = = = = = = = =
+qwerty    h j k l n u i m e f t 
+\         ⬇ ⬇ ⬇ ⬇ ⬇ ⬇ ⬇ ⬇ ⬇ ⬇ ⬇
+colemak   n e u i k l m h f t j 
+=======   = = = = = = = = = = =
 
 
 Design rationale
